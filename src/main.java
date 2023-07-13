@@ -14,8 +14,13 @@ public class main {
         out.println("Hangi islemi yapmak istersiniz?");
         islem=input.next();
 
-        out.println("Kac sayi kullanmak istersiniz?");
-        sayi_sayisi = input.nextInt();
+        if (islem != "+" + "/"+ "-" +"*")
+        {
+        out.println("Lutfen matematiksel bir ifade ile hangi islemi yapmak istediginizi belirtiniz ornek: /,-,*,+");
+         }
+            out.println("Kac sayi kullanmak istersiniz?");
+            sayi_sayisi = input.nextInt();
+
 
         if(islem.equals("+"))
         {
@@ -25,7 +30,7 @@ public class main {
                 sayi1 = input.nextInt();
                 out.println("ikinci sayi:");
                 sayi2 = input.nextInt();
-                out.println("sonuç:"+ (sayi1+sayi2));
+                out.println("sonuc:"+ (sayi1+sayi2));
             }
             else if (sayi_sayisi >2 && sayi_sayisi<=3)
             {
@@ -164,6 +169,10 @@ public class main {
             {
                 out.println("2 den buyuk 4 den kucuk sayi degeri secmelisiniz");
             }
+        }
+        else if (islem != "+" + "/"+ "-" +"*")
+        {
+            out.println("Lutfen matematiksel bir ifade ile hangi islemi yapmak istediginizi belirtiniz ornek: /,-,*,+");
         }
     }
 }
